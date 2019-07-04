@@ -4,7 +4,7 @@
 class Route{
 
     private $url;
-    private $controller='Login';
+    private $controller= 'LoginController';
     private $action='';
     private $params=[];
 
@@ -15,7 +15,7 @@ class Route{
         }
 
         if(isset($this->url['page'])){
-            $this->controller = $this->url['page'];
+            $this->controller = $this->url['page']."Controller";
             if(class_exists($this->controller)) {
                 $this->controller=new $this->controller();
             }else{
@@ -34,23 +34,15 @@ class Route{
         }
 
         if(isset($this->url['params'])){
-            $this->params=$this->url['params'];
-            //echo $this->params;
+            $this->params=explode(",",$this->url['params']);
+           // echo $this->params[2];
         }
 
-        call_user_func(array($this->controller, $this->action), $this->params /* , ... */);
+        call_user_func(array($this->controller, $this->action), $this->params );
 
 
     }
 
-    /*
-    function createController(){
-        if(class_exists($this->controller)){
-
-        }else{
-            echo "<h1>404 A keresett oldal nem található</h1>";
-        }
-    }*/
 
 
 
