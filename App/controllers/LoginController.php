@@ -1,23 +1,29 @@
 <?php
 
 class LoginController{
-    public $userName;
+    public $log;
 
     function __construct(){
-        autoload_view(LoginView);
+        $this->log = new LoginModell();
+        autoload("LoginView");
+        print_r($GLOBALS['message']);
     }
 
-    function loginIn(){
-        $conn=Datebase::getDatabase();
-        $username=$_POST['uname'];
-        $stmt = $conn->prepare("SELECT * FROM proba where first=:username ");
-        $stmt->execute(["username" => $username]);
-        $exsist = $stmt->rowCount();
-        $result=$stmt->fetch(PDO::FETCH_ASSOC);
-        
-        print_r($result);
 
-        echo $exsist;
+
+
+    function loginIn(){
+
+        $username=$_POST['uname'];
+        $password=$_POST['psw'];
+        if(isset($_POST['sub'])) {
+            if( $this->log->existUser($username,$password)=='sucess'){
+                Session::init();
+                Session::set("loggedin",true);
+                Session::set('user_name', $username);
+                header("Location:/index.php?page=FileManager");
+            }
+        }
 
     }
 

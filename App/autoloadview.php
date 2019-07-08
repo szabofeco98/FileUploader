@@ -1,7 +1,8 @@
 <?php
 function autoload_view($className){
 
-    $directories=array('App/views/');
+    $directories=array('App/views/',
+                       'App/views/Contents/' );
 
     foreach($directories as $directory){
         $filename=$directory.$className.".html";

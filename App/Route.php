@@ -1,5 +1,5 @@
 <?php
-
+$msg=[];
 
 class Route{
 
@@ -16,7 +16,7 @@ class Route{
 
         if(isset($this->url['page'])){
             $this->controller = $this->url['page']."Controller";
-            if(class_exists($this->controller)) {
+            if(class_exists($this->controller) ) {
                 $this->controller=new $this->controller();
             }else{
                 echo "<h1>404 A keresett oldal nem található</h1>";
