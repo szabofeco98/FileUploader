@@ -6,12 +6,11 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <style>
         .error{
-            width: 300px;
-            background-color: lightcoral;
             color: darkred;
-            text-align: center;
         }
-
+        .sucess{
+            color: forestgreen;
+        }
     </style>
 </head>
 <body>
@@ -26,21 +25,31 @@
     <h1>Regisztráció</h1>
     <form action="/index.php?page=SignUp&action=insertUser" method="post" id="registForm">
         <div class="container">
+            <div class="error"><?php echo $GLOBALS["msg"]["unameError"]?? ''?></div>
+            <div class="error"><?php echo $GLOBALS["msg"]["unameExist"]?? ''?></div>
+
             <label ><b>Felhasználónév</b></label>
             <input type="text" placeholder="KisP " name="reg_u_name" min=3 required>
             <br/>
+
+            <div class="error"><?php echo $GLOBALS["msg"]["pswError"]?? ''?></div>
             <label ><b>Jelszó</b></label>
             <input type="password" placeholder="******" name="reg_psw" required>
             <br/>
+
             <label ><b>Név</b></label>
             <input type="text" placeholder="Kiss Pista " name="reg_name" required>
             <br/>
+
+            <div class="error"><?php echo $GLOBALS["msg"]["emailError"]?? ''?></div>
+            <div class="error"><?php echo $GLOBALS["msg"]["emailExist"]?? ''?></div>
             <label ><b>Email</b></label>
             <input type="text" placeholder="valami@example.com" name="reg_mail" required>
             <br/>
+
             <button type="submit" name="reg_sub" >Regisztráció</button>
 
-            <div> <?php echo isset($GLOBALS["msg"]["message"])?$GLOBALS["msg"]["message"]:"baj van"  ?> </div>
+            <div class="sucess"><?php echo  $GLOBALS["msg"][sucess]?? ''?></div>
         </div>
     </form>
 

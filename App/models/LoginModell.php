@@ -25,25 +25,30 @@ class LoginModell{
     }
 
     function insert($username,$password,$name,$email){
-        $errors=[];
+        $array=[];
 
-        if($this->validUserName($username)=="invalid") array_push($errors,"invalidUname");
-        if($this->validPassword($password)=="invalid") array_push($errors,"invalidPsw");
+        if($this->validUserName($username)=="invalid")   $array["unameError"]="Hibás Felhasználónév!";
 
-        if($this->validEmail($email)=="invalid"  ) array_push($errors,"invalidEmail");
-        if($this->validEmail($email)=="emailExist"  ) array_push($errors,"emailExist");
-        if($this->existUser($username,$password)!="wrongname"  ) array_push($errors, "userExist");
+        if($this->validPassword($password)=="invalid") $array["pswError"]="Hibás Jelszó!";
+
+        if($this->validEmail($email)=="invalid"  ) $array["emailError"]="Hibás Email cím!";
+
+        if($this->validEmail($email)=="emailExist"  ) $array["emailExist"]="Az emailel már regisztráltak!";
+
+        if($this->existUser($username,$password)!="wrongname"  ) $array["unameExist"]="A felhasználónév már foglalt!";
 
         if($this->validEmail($email)=="valid" && $this->validPassword($password)=="valid"
         && $this->validUserName($password)=="valid" && $this->existUser($username,$password)=="wrongname"){
+
             $password = password_hash($password, PASSWORD_BCRYPT);
             $stmt = $this->db->prepare("INSERT INTO users(user_name,passwd,email,name)
                                      VALUES(:username,:password,:email,:user_name)");
             $stmt->execute(["username" => $username, "password" => $password, "email" => $email, "user_name" => $name]);
-            array_push($errors, "sucess");
+
+            $array["sucess"]="Sikeres regisztáció!";
         }
 
-        return $errors;
+        return $array;
     }
 
     private function validUserName($username){

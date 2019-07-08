@@ -18,7 +18,7 @@
                 $filename=$directory.$className.".html";
                 if (file_exists($filename)) {
                     // echo "autoloaded: ".$filename."<br/>";
-                    require_once $filename;
+                    require $filename;
                     return;
                 }
             }
