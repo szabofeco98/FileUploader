@@ -26,13 +26,13 @@ class SignUpController extends BaseController {
             foreach ($errors as $error){
                 if($error=="sucess") call_user_func_array(array("SignUp","index"),array(["message"=>"Sikeres regisztáció!"]));
             }*/
-            //call_user_func_array(array("SignUp","index"),array(["message"=>"Sikeres regisztáció!"]));
-            header("Location:/index.php?page=SignUp&action=index&params=siker");
+
+            call_user_func_array(array("SignUpController","index"),array($errors));
+
+            //header("Location:/index.php?page=SignUp&action=index&params=siker");
 
 
-
-
-                /*
+            /*
             foreach ($errors as $error){
 
 
