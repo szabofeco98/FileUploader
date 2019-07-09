@@ -16,5 +16,11 @@
         </script>
     </div>
     <h1>Ide csak bejelentkezve jutsz</h1>
+
+    <form action="/index.php?page=FileManager&action=upload" method="post" enctype="multipart/form-data" >
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Fájl feltöltés" name="submit">
+    </form>
 </body>
 </html>
