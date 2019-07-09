@@ -2,7 +2,7 @@
 
 
 class Datebase{
-    static $db=null;
+    private static $db=null;
 
     public function __construct(){
     }

@@ -9,6 +9,8 @@ class LoginModell{
     }
 
     function existUser($username,$paswd){
+
+
         $stmt = $this->db->prepare("SELECT passwd FROM users where user_name=:username ");
         $stmt->execute(["username" => $username]);
         $exist=$stmt->fetch(PDO::FETCH_ASSOC);

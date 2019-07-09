@@ -2,15 +2,20 @@
 
 
 class FileManagerController extends BaseController {
+    private $FileModell;
 
-    function __construct(){
+    public function __construct(){
+        $this->FileModell=new FileManagerModell();
+    }
+
+    function index($error=[]){
         Session::init();
         if(!Session::get("loggedin")) {
             Session::destroy();
             autoload("LoginView");
-        }else{
+        } else{
             echo "Hello ".Session::get("user_name");
-            autoload("FileManagerView");
+            $this->view("FileManagerView",$error);
         }
 
     }
@@ -23,10 +28,17 @@ class FileManagerController extends BaseController {
             $file_tmp =$_FILES['fileToUpload']['tmp_name'];
             $file_type=$_FILES['fileToUpload']['type'];
             $file_ext=strtolower(end(explode('.',$_FILES['fileToUpload']['name'])));
+            if(!$file_ext){
+                $errors["notExs"]="Nincs kiválasztott fájl!";
+            }
+            $this->FileModell->insert($file_name,$file_size,$file_type,$file_tmp);
 
-            echo $file_name."<br/>".$file_size."<br/>".$file_tmp."<br/>".$file_type;
-            move_uploaded_file($file_tmp,"/".$file_name);
-            echo "Success";
+            call_user_func_array(array("FileManagerController","index"),array($errors));
+            echo $file_name."<br/>".$file_size."<br/>".$file_tmp."<br/>".$file_type."<br/>";
+            echo date("Y-m-d H:i:s");
+
+
+
         }
     }
 
