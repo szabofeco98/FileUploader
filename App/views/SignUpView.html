@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regist</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        .error{
+            color: darkred;
+        }
+        .sucess{
+            color: forestgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="head" >
+    <script>
+        $.post('/App/views/head.php',{},function (resp) {
+            document.getElementById('head').innerHTML=resp;
+        })
+    </script>
+</div>
+
+    <h1>Regisztráció</h1>
+    <form action="/index.php?page=SignUp&action=insertUser" method="post" id="registForm">
+        <div class="container">
+            <div class="error"><?php echo $GLOBALS["msg"]["unameError"]?? ''?></div>
+            <div class="error"><?php echo $GLOBALS["msg"]["unameExist"]?? ''?></div>
+
+            <label ><b>Felhasználónév</b></label>
+            <input type="text" placeholder="KisP " name="reg_u_name" min=3 required>
+            <br/>
+
+            <div class="error"><?php echo $GLOBALS["msg"]["pswError"]?? ''?></div>
+            <label ><b>Jelszó</b></label>
+            <input type="password" placeholder="******" name="reg_psw" required>
+            <br/>
+
+            <label ><b>Név</b></label>
+            <input type="text" placeholder="Kiss Pista " name="reg_name" required>
+            <br/>
+
+            <div class="error"><?php echo $GLOBALS["msg"]["emailError"]?? ''?></div>
+            <div class="error"><?php echo $GLOBALS["msg"]["emailExist"]?? ''?></div>
+            <label ><b>Email</b></label>
+            <input type="text" placeholder="valami@example.com" name="reg_mail" required>
+            <br/>
+
+            <button type="submit" name="reg_sub" >Regisztráció</button>
+
+            <div class="sucess"><?php echo  $GLOBALS["msg"]["sucess"]??'' ?></div>
+        </div>
+    </form>
+
+
+
+
+    <script>
+        var elementExists = document.getElementById("existUser");
+        if(elementExists){
+            alert(letezel);
+        }
+
+
+        function validateForm() {
+            var error="";
+            var uname = document.forms["registForm"]["reg_u_name"].value;
+            var preg= uname.match("/[^\p{L}0-9\p{L}a-z\p{L}A-Z\p{L}\s]/u'");
+            if (preg || uname.length<3) {
+                error+="Rossz felhasználónév (Legalább 3 karakter)\n"
+            }
+            var passw = document.forms["registForm"]["reg_psw"].value;
+            var preg2= uname.match("/[^\p{L}0-9\p{L}a-z\p{L}A-Z\p{L}\s]/u'");
+            if (preg2 || passw.length<3) {
+                error+="Rossz Jelszó (Legalább 3 karakter) \n"
+            }
+            var email = document.forms["registForm"]["reg_mail"].value;
+
+            if(!validateEmail(email)){
+                error+="Rossz Email cím";
+            }
+            if(error!="") alert(error);
+
+        }
+
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FileManager</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div id="head" >
+        <script>
+            $.post('/App/views/head.php',{},function (resp) {
+                document.getElementById('head').innerHTML=resp;
+            })
+        </script>
+    </div>
+    <h1>Ide csak bejelentkezve jutsz</h1>
+
+    <form action="/index.php?page=FileManager&action=upload" method="post" enctype="multipart/form-data" >
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Fájl feltöltés" name="submit">
+    </form>
+    <div class="error">  <?php echo $GLOBALS['msg']['notExs'] ??'' ?>  </div>
+</body>
+</html>
