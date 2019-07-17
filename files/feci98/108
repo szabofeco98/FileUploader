@@ -1,0 +1,82 @@
+<br />
+<b>Warning</b>:  readfile(files/feci98/96): failed to open stream: No such file or directory in <b>/opt/lampp/htdocs/App/models/FileManagerModell.php</b> on line <b>57</b><br />
+Hello feci98<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FileManager</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../../bootstrap.min.css">
+    <style>
+        .mytable{
+            width: 60%;
+        }
+        th,a{
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="head" >
+        <script>
+            $.post('/App/views/head.php',{},function (resp) {
+                document.getElementById('head').innerHTML=resp;
+            })
+
+        </script>
+    </div>
+    <h1>Ide csak bejelentkezve jutsz</h1>
+
+    <form action="/index.php?page=FileManager&action=upload" method="post" enctype="multipart/form-data" >
+        Válassza ki a fájlt:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Fájl feltöltés" name="submit">
+    </form>
+    <table  class="table table-hover mytable table-responsive table-striped" id="filesTable">
+        
+
+
+
+        <tr>
+            <th >Fájl név</th>
+            <th >Fájl méret</th>
+            <th >Fájl Típus</th>
+            <th >Módosítás dátuma</th>
+            <th> Műveletek</th>
+
+        </tr>
+            <tr>
+            <td>bhax-textbook-fdl.pdf</td>
+            <td>337072</td>
+            <td>application/pdf</td>
+            <td>2019-07-17 13:46:54</td>
+                <td><a href='index.php?page=FileManager&action=download&params=89'>Letölt</a>
+                    <a href='index.php?page=FileManager&action=delete&params=89'>töröl</a></td>
+              </tr>
+            <tr>
+            <td>test2.txt</td>
+            <td>9</td>
+            <td>text/plain</td>
+            <td>2019-07-17 16:33:28</td>
+                <td><a href='index.php?page=FileManager&action=download&params=96'>Letölt</a>
+                    <a href='index.php?page=FileManager&action=delete&params=96'>töröl</a></td>
+              </tr>    </table>
+
+    <div>
+        <a href="/index.php?page=FileManager&action=getFilesNumber&params=1">1</a><a href="/index.php?page=FileManager&action=getFilesNumber&params=2">2</a>    </div>
+
+    <div class="error">    </div>
+    <div class="sucess">  siker  </div>
+
+
+    <script>
+        function page(i) {
+            return i;
+        }
+
+    </script>
+</body>
+</html>
