@@ -20,7 +20,8 @@ filmek nézése valamint cikkek olvasása amelyből az ismeretlen szavakat
 kiemeli és egy külön fájlba elmenti azokat.Szükség lenne egy szoftverre
 amely ezeket az idegen szavakat felkérdezi ez által elő segítve a
 tanulást továbbá lehetőséget kinál.
-<p/>
+</p>
+
 ## 3. Vágyálom rendszer
 
 
