@@ -5,7 +5,7 @@
 
 ## 2. Jelenlegi helyzet
 
-<p>
+<p style="text-align: right">
 Az angol nyelv tudása rendkivül fontossá vált a mai világban
 elendgethetetlen és szerves részét képzi az oktatásnak valamint a
 bizonyos poziciók betöltése is nyelv tudáshoz kötött.Azonban bizonyos
