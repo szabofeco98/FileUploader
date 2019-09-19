@@ -20,7 +20,7 @@ személyenkénti igényeknek megfelelő tanulást tesz lehetővé.
 A program segítségével kényelmessé és elvezhetővé tehetjük a szavak,kifejezések tanulását
 rendkívül könnyen elérhető módon és megszerzett tudást nagy valószínűséggel kamatoztatni is tudjuk.
 <br>
-By:[Szabó Ferenc](https://github.com/szabofeco98)
+Author:[Szabó Ferenc](https://github.com/szabofeco98)
 ## 2. A rendszer céljai és nem céljai
 
 ## 3. Vágyálom rendszer
