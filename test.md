@@ -1,4 +1,3 @@
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2bTest
+# Szótár Projekt
+
+## * Vezetői összefoglaló
