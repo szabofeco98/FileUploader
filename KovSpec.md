@@ -3,11 +3,11 @@ Szótár Projekt
 
 
 1. Vezetői összefoglaló
-=======================
+============================
 
 
 2. Jelenlegi helyzet
-====================
+============================
 
       Az angol nyelv tudása rendkivül fontossá vált a mai világban
       elendgethetetlen és szerves részét képzi az oktatásnak valamint a
@@ -25,12 +25,11 @@ Szótár Projekt
       tanulást továbbá lehetőséget kinál.
 
 3. Vágyálom rendszer
-====================
+============================
 
 4. Jelenlegi üzleti folyamatok
-==============================
+============================
 
 5. Igényelt üzleti feladatok
 ============================
-
 
