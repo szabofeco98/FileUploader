@@ -6,7 +6,9 @@
 	személyenkénti igényeknek megfelelő tanulást tesz lehetővé.
 
 * A felmerülő probléma:
-  * a diákok az igényeikhez mérten tudják használni
+  * Településenként eltérő nyelv oktatás 
+  * Hiányos a szókincs
+* Megoldás
 ## 2. A rendszer céljai és nem céljai
 
 ## 3. Vágyálom rendszer
