@@ -5,7 +5,7 @@
 
 ## 2. Jelenlegi helyzet
 
-
+<p>
 Az angol nyelv tudása rendkivül fontossá vált a mai világban
 elendgethetetlen és szerves részét képzi az oktatásnak valamint a
 bizonyos poziciók betöltése is nyelv tudáshoz kötött.Azonban bizonyos
@@ -20,7 +20,7 @@ filmek nézése valamint cikkek olvasása amelyből az ismeretlen szavakat
 kiemeli és egy külön fájlba elmenti azokat.Szükség lenne egy szoftverre
 amely ezeket az idegen szavakat felkérdezi ez által elő segítve a
 tanulást továbbá lehetőséget kinál.
-
+<p/>
 ## 3. Vágyálom rendszer
 
 
