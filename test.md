@@ -2,8 +2,8 @@
 
 	
 ## 1. Jelenlegi helyzet
-	A program az angol szavak tanulására kínál interaktív megoldást amely rugalmas
-	személyenkénti igényeknek megfelelő tanulást tesz lehetővé.
+A program az angol szavak tanulására kínál interaktív megoldást amely rugalmas
+személyenkénti igényeknek megfelelő tanulást tesz lehetővé.
 
 * A felmerülő probléma:
   * Településenként eltérő nyelv oktatás 
@@ -17,9 +17,8 @@
     x-darab szó felkérdezésére.
   * A program modern, aktuális technológiákat használó igényes rendszer.	
 
-  
-	A program segítségével kényelmessé és elvezhetővé tehetjük a szavak,kifejezések tanulását
-	rendkívül könnyen elérhető módon és megszerzett tudást nagy valószínűséggel kamatoztatni is tudjuk.
+A program segítségével kényelmessé és elvezhetővé tehetjük a szavak,kifejezések tanulását
+rendkívül könnyen elérhető módon és megszerzett tudást nagy valószínűséggel kamatoztatni is tudjuk.
 <br>
 By:[Szabó Ferenc](https://github.com/szabofeco98)
 ## 2. A rendszer céljai és nem céljai
