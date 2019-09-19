@@ -4,7 +4,7 @@
 ## 1. Jelenlegi helyzet
 	A program az angol szavak tanulására kínál interaktív megoldást amely rugalmas
 	személyenkénti igényeknek megfelelő tanulást tesz lehetővé.
-<div>
+
 * A felmerülő probléma:
   * Településenként eltérő nyelv oktatás 
   * Hiányos a szókincs
@@ -16,7 +16,7 @@
   * A program lehetőséget ad minden szó vissza kérdezésére vagy igényink szerint véletlen
     x-darab szó felkérdezésére.
   * A program modern, aktuális technológiákat használó igényes rendszer.	
-</div>
+
   
 	A program segítségével kényelmessé és elvezhetővé tehetjük a szavak,kifejezések tanulását
 	rendkívül könnyen elérhető módon és megszerzett tudást nagy valószínűséggel kamatoztatni is tudjuk.
