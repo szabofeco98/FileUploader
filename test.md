@@ -1,12 +1,23 @@
 # Szótár Projekt
 
-## 1. Vezetői összefoglaló
-1. Item 1
-1. Item 2
-1. Item 3
-   1. Item 3a
-## Ez már nem a 
+	
+## 1. Jelenlegi helyzet
+	A program az angol szavak tanulására kínál interaktív megoldást amely rugalmas
+	személyenkénti igényeknek megfelelő tanulást tesz lehetővé.
 
-   A teknősök (Testudines vagy Chelonia) a hüllők egyik monofiletikus csoportja, az állatrendszerekben általában rendje. Kihalt és létező fajaik egyaránt vannak. Mintegy 200 millió évvel ezelőtt, a paleozoikum perm korszakában jelentek meg őseik. Ma 327 ismert teknősfaj él a Földön 14 családra osztva. A fajok 42%-a védett. Legfőbb testfelépítésbeli jellegzetességük – mely minden más gerincestől megkülönbözteti őket – a testüket hasi- és hátoldalon is beborító csontos páncélzat.
-  @szabofeco98
+	* A felmerülő probléma:
+		*a diákok az igényeikhez mérten tudják használni
+## 2. A rendszer céljai és nem céljai
+
+## 3. Vágyálom rendszer
+
+
+## 4. Jelenlegi üzleti folyamatok
+
+
+## 5. Igényelt üzleti feladatok
+
+
+
+
 
