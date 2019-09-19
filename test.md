@@ -2,8 +2,8 @@
 
 	
 ## 1. Jelenlegi helyzet
-	A program az angol szavak tanulására kínál interaktív megoldást amely rugalmas
-	személyenkénti igényeknek megfelelő tanulást tesz lehetővé.
+A program az angol szavak tanulására kínál interaktív megoldást amely rugalmas
+személyenkénti igényeknek megfelelő tanulást tesz lehetővé.
 
 * A felmerülő probléma:
   * Településenként eltérő nyelv oktatás 
