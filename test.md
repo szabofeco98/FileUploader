@@ -17,8 +17,8 @@
     x-darab szó felkérdezésére.
   * A program modern, aktuális technológiákat használó igényes rendszer.	
   <!-- -->
-	A program segítségével kényelmessé és elvezhetővé tehetjük a szavak,kifejezések tanulását
-	rendkívül könnyen elérhető módon és megszerzett tudást nagy valószínűséggel kamatoztatni is tudjuk.
+A program segítségével kényelmessé és elvezhetővé tehetjük a szavak,kifejezések tanulását
+rendkívül könnyen elérhető módon és megszerzett tudást nagy valószínűséggel kamatoztatni is tudjuk.
 ## 2. A rendszer céljai és nem céljai
 
 ## 3. Vágyálom rendszer
