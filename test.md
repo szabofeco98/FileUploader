@@ -1,3 +1,4 @@
 # Szótár Projekt
 
-##* Vezetői összefoglaló
+## 1. Vezetői összefoglaló
+  
